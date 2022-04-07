@@ -1,6 +1,5 @@
 #konversi string ke bahasa G tahun 90an
-print("Masukan Kalimat : ")
-txt = input()
+txt = input("Masukan Kalimat : ")
 
 def bahasaG(txt):
   dictionary = {'a': 'aga', 'e':'ege', 'i': 'igi', 'o': 'ogo', 'u': 'ugu', 'A': 'Aga', 'E':'Ege', 'I': 'Igi', 'O': 'Ogo', 'U': 'Ugu'}
