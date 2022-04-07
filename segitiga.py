@@ -1,0 +1,1 @@
+#segitiga dengan python
