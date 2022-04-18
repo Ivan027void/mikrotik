@@ -6,95 +6,107 @@
 int main(){
     int menu;
     char buffer[255];
-
-    printf("                selamat datang              \n");
-    printf("        aplikasi perpustakaan sederhana     \n");
-    printf("pilihan:\n");
-    printf("1)info aplikasi\n");
-    printf("2)membuat kartu perpustakaan\n");
-    printf("3)rak buku\n");
-    printf("4)transaksi peminjaman\n");
-    printf("5)transaksi pengembalian\n");
-    printf("6)keluar\n");
-    printf("pilih menu: \n");
+    
+    printf("--------------------------------------------\n");
+    printf("|               Selamat Datang             |\n");
+    printf("|       Aplikasi Perpustakaan Sederhana    |\n");
+    printf("--------------------------------------------\n");
+    printf("Pilihan Menu :\n");
+    printf("1)Info Aplikasi\n");
+    printf("2)Membuat Kartu Perpustakaan\n");
+    printf("3)Ketersediaan Buku\n");
+    printf("4)Transaksi Peminjaman\n");
+    printf("5)Transaksi Pengembalian\n");
+    printf("6)Keluar\n\n");
+    printf("Pilihlah Salah Satu Menu Di atas: ");
     scanf("%d",&menu);
     switch (menu) {
         case 1 : 
-        printf("info aplikasi"); break;
+         printf("Info Aplikasi"); break;
         case 2 :
-        printf("membuat kartu pustakaan\n ");break;
+        printf("Membuat Kartu Perpustakaan\n ");break;
         case 3:
-        printf("rak buku"); break;
+        printf("Berikut adalah buku yang tersedia :\n"); 
+        printf("--------------------------------------------\n");
+        printf("|   Judul buku         |    Pengarang      |\n");
+        printf("--------------------------------------------\n");
+        printf("|   Bahasa Indonesia   |   Siti Ansoriyah  |\n");
+        printf("|   Kimia Dasar        |   Sulakhuddin     |\n");
+        printf("|   Fisika             |   Jeffry Handhika |\n");
+        printf("|   Basis Data Dasar   |   Adyanita Lubis  |\n");
+        printf("|   Matematika Diskrit |   Gede Suweken    |\n");
+        printf("--------------------------------------------\n");
+        break;
         case 4: 
-        printf("transaksi peminjam buku");break;
+        printf("Transaksi Peminjaman Buku");break;
         case 5: 
-        printf("transaksi pengembalian buku");break;
+        printf("Transaksi Pengembalian Buku");break;
         case 6:
-        printf("keluar"); break;
+        printf("Keluar"); break;
     }
     if(menu==2){     
     FILE *fptr;
     fptr = fopen("kartu.txt","w");
     //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
-    printf("lengkapi data dibawah ini:\n");
+    printf("Lengkapi data dibawah ini :\n");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
     fputs(buffer, fptr);
-    // setelag dibuka kita wajib menutupi file ini
+    // setelah dibuka kita wajib menutupi file ini
     fclose(fptr);
 
     fptr = fopen("kartu.txt","a");
     //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
-    printf("\n masukkan nama: ");
+    printf("Masukkan Nama : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
     fputs(buffer, fptr);
-    // setelag dibuka kita wajib menutupi file ini
+    // setelah dibuka kita wajib menutupi file ini
     fclose(fptr);
     
     fptr = fopen("kartu.txt","a");
     //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
-    printf("\n masukkan npm: ");
+    printf("Masukkan NPM : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
     fputs(buffer, fptr);
-    // setelag dibuka kita wajib menutupi file ini
+    // setelah dibuka kita wajib menutupi file ini
     fclose(fptr);
     
     fptr = fopen("kartu.txt","a");
     //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
-    printf("\n masukkan prodi: ");
+    printf("Masukkan Prodi : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
     fputs(buffer, fptr);
-    // setelag dibuka kita wajib menutupi file ini
+    // setelah dibuka kita wajib menutupi file ini
     fclose(fptr);
 
     fptr = fopen("kartu.txt","a");
     //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
-    printf("\n masukkan fakultas: ");
+    printf("Masukkan Fakultas : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
     fputs(buffer, fptr);
-    // setelag dibuka kita wajib menutupi file ini
+    // setelah dibuka kita wajib menutupi file ini
     fclose(fptr);
 
     fptr = fopen("kartu.txt","a");
     //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
-    printf("\n masukkan alamat: ");
+    printf("Masukkan Alamat : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
     fputs(buffer, fptr);
-    // setelag dibuka kita wajib menutupi file ini
+    // setelah dibuka kita wajib menutupi file ini
     fclose(fptr);
 
     fptr = fopen("kartu.txt","a");
     //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
-    printf("\n masukkan no_tlp: ");
+    printf("Masukkan Nomor Telepon : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
     fputs(buffer, fptr);
-    // setelag dibuka kita wajib menutupi file ini
+    // setelah dibuka kita wajib menutupi file ini
     fclose(fptr);
     }
     return 0;
