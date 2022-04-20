@@ -7,6 +7,7 @@ int main(){
     int menu;
     char buffer[255];
     
+    printf("\n");
     printf("--------------------------------------------\n");
     printf("|               Selamat Datang             |\n");
     printf("|       Aplikasi Perpustakaan Sederhana    |\n");
