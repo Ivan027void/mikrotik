@@ -17,5 +17,3 @@ print( list)
 #data sesudah diurutkan menampilkan data urut 
 print("data setelah diurutkan:") 
 print(sorted(list))
-© 2022 GitHub, Inc.
-Terms
