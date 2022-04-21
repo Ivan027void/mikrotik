@@ -2,10 +2,62 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <conio.h>
 
-int main(){
+int main(int totalArgumen, char *nilaiArgumen[]){
+
+    if(!(totalArgumen == 3)){ // Tidak sama dengan 3 
+        printf("Inputan yang anda masukkan tidak sesuai prosedur -_-");
+        return EXIT_FAILURE;
+    }
+    char userNameInput[50],passwordInput[50];
+    strcpy(userNameInput,nilaiArgumen[1]);
+    strcpy(passwordInput,nilaiArgumen[2]);
+
     int menu;
+    char kem;
     char buffer[255];
+    
+    FILE *fptr;
+    // Membuat error handling jika file yang dituju tidak ditemukan
+    if((fptr = fopen("Database/login.bin", "rb")) == NULL){
+        printf("File tidak ditemukan -_-");
+        return EXIT_FAILURE;
+    }
+    // Deklarasi Variabel untuk membaca isi file binari
+    char bufferedReader[50];
+    fread(bufferedReader,sizeof(char), sizeof(bufferedReader)/ sizeof(char),fptr);
+    fclose(fptr);
+
+    /* Deklarasi variabel untuk membuat variabel username dan password 
+        dengan memakai fungsi strtok untuk pemisah antara username dan password
+        isi dari file binari tersebuat adalah romusha@ardisholat
+        username = mikrotik
+        password = ivan
+        Delimiter yang digunakan adalah tanda @*/
+
+        char *string[3];
+        char username[50], password[50];
+        int temp = 0; // Variabel bantuan
+
+        string[0] = strtok(bufferedReader,"@");
+        while (string[temp++] != NULL){
+            string[temp] = strtok(NULL,"@");
+        }
+
+        strcpy(username,string[0]);
+        strcpy(password,string[1]);
+
+        printf("Username:%s\n", username); 
+        printf("Password:%s\n", password); 
+        if((strcmp(userNameInput,username) == 0) && (strcmp(passwordInput,password) == 0)){
+            printf("Selamat anda berhasil login ^_^");
+        }else{
+            printf("Maaf Anda gagal login -_-");
+            return EXIT_FAILURE;
+        }
+        mulai:
+  { 
     
     printf("\n");
     printf("--------------------------------------------\n");
@@ -44,8 +96,11 @@ int main(){
         printf("Transaksi Pengembalian Buku");break;
         case 6:
         printf("Keluar"); break;
+        default:
+        printf("Maaf Pilihan anda tidak tersedia\n\n");
+}
     }
-    if(menu==2){     
+     if(menu==2){   
     FILE *fptr;
     fptr = fopen("kartu.txt","w");
     //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
@@ -110,5 +165,20 @@ int main(){
     // setelah dibuka kita wajib menutupi file ini
     fclose(fptr);
     }
+     tidak :
+    printf("Kembali ke menu utama [Y/T] ? "); 
+    kem = getche();
+    if (kem == 'y' || kem == 'Y')
+    goto mulai;
+ else if (kem == 't' || kem == 'T')
+     {
+         printf("\n--------------------------");
+         printf("\n==========================");
+         printf("\n\n...... TERIMA KASIH ......\n\n");
+         printf("==========================");
+         printf("\n--------------------------");
+            }
     return 0;
-}
+  }    
+    
+    
