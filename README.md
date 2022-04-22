@@ -11,4 +11,3 @@ proyek pemrograman dengan judul 'pembuatan kartu perpustakaan'
 ### NOTE ⚠️
 <hr>
 <b> Jika gagal mungkin argumen yang di input tidak sama dengan 3</b>
-<hr>
