@@ -139,7 +139,7 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     fclose(fptr);
 
     fptr = fopen("kartu.txt","a");
-    //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
+    //menyuruh pengguna untuk menginput sesuatu ke dalam file document.txt
     printf("Masukkan Fakultas : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
