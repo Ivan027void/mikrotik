@@ -1,7 +1,8 @@
-### mikrotik
+### MIKROTIK
+<hr>
 proyek pemrograman dengan judul 'pembuatan kartu perpustakaan'
 
-### Bagaiman Cara menjalankan Program ini❓
+### Cara menjalankan Program ini
 <hr>
 <b>1. Login dengan melakukan kompilasi terlebih dahulu </b>
 <pre><code> $ gcc main.c -o main </code></pre>
