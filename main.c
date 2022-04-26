@@ -75,29 +75,38 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     scanf("%d",&menu);
     switch (menu) {
         case 1 : 
-         printf("Info Aplikasi"); break;
+         printf("Info Aplikasi\n\n"); 
+         printf("Aplikasi ini merupakan hasil dari tugas project mata kuliah Pemrograman kelas B yang disusun oleh kelompok Mikrotik.\n");
+         printf("Aplikasi ini digunakan sebagai simulasi pembuatan kartu perpustakaan secara sederhana.");
+         break;
         case 2 :
-        printf("Membuat Kartu Perpustakaan\n ");break;
+         printf("Membuat Kartu Perpustakaan\n ");
+            break;
         case 3:
-        printf("Berikut adalah buku yang tersedia :\n"); 
-        printf("--------------------------------------------\n");
-        printf("|   Judul buku         |    Pengarang      |\n");
-        printf("--------------------------------------------\n");
-        printf("|   Bahasa Indonesia   |   Siti Ansoriyah  |\n");
-        printf("|   Kimia Dasar        |   Sulakhuddin     |\n");
-        printf("|   Fisika             |   Jeffry Handhika |\n");
-        printf("|   Basis Data Dasar   |   Adyanita Lubis  |\n");
-        printf("|   Matematika Diskrit |   Gede Suweken    |\n");
-        printf("--------------------------------------------\n");
-        break;
+         printf("Berikut adalah buku yang tersedia :\n\n"); 
+         printf("--------------------------------------------\n");
+         printf("|   Judul buku         |    Pengarang      |\n");
+         printf("--------------------------------------------\n");
+         printf("|   Bahasa Indonesia   |   Siti Ansoriyah  |\n");
+         printf("|   Kimia Dasar        |   Sulakhuddin     |\n");
+         printf("|   Fisika             |   Jeffry Handhika |\n");
+         printf("|   Basis Data Dasar   |   Adyanita Lubis  |\n");
+         printf("|   Matematika Diskrit |   Gede Suweken    |\n");
+         printf("--------------------------------------------\n");
+            break;
         case 4: 
-        printf("Transaksi Peminjaman Buku");break;
+         printf("Transaksi Peminjaman Buku\n\n");
+         printf("Mohon maaf data anda belum tersedia");
+            break;
         case 5: 
-        printf("Transaksi Pengembalian Buku");break;
+         printf("Transaksi Pengembalian Buku\n\n");
+         printf("Mohon maaf data anda belum tersedia");
+            break;
         case 6:
-        printf("Keluar"); break;
+         printf("Keluar"); 
+            break;
         default:
-        printf("Maaf Pilihan anda tidak tersedia\n\n");
+         printf("Maaf Pilihan anda tidak tersedia\n\n");
 }
     }
      if(menu==2){   
@@ -112,7 +121,7 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     fclose(fptr);
 
     fptr = fopen("kartu.txt","a");
-    //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
+    //meminta pengguna untuk menginput sesuatu ke dalam file document.txt
     printf("Masukkan Nama : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
@@ -121,7 +130,7 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     fclose(fptr);
     
     fptr = fopen("kartu.txt","a");
-    //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
+    //meminta pengguna untuk menginput sesuatu ke dalam file document.txt
     printf("Masukkan NPM : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
@@ -130,7 +139,7 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     fclose(fptr);
     
     fptr = fopen("kartu.txt","a");
-    //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
+    //meminta pengguna untuk menginput sesuatu ke dalam file document.txt
     printf("Masukkan Prodi : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
@@ -139,7 +148,7 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     fclose(fptr);
 
     fptr = fopen("kartu.txt","a");
-    //menyuruh pengguna untuk menginput sesuatu ke dalam file document.txt
+    //meminta pengguna untuk menginput sesuatu ke dalam file document.txt
     printf("Masukkan Fakultas : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
@@ -148,7 +157,7 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     fclose(fptr);
 
     fptr = fopen("kartu.txt","a");
-    //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
+    //meminta pengguna untuk menginput sesuatu ke dalam file document.txt
     printf("Masukkan Alamat : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
@@ -157,7 +166,7 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     fclose(fptr);
 
     fptr = fopen("kartu.txt","a");
-    //menuyruh pengguna untuk menginput sesuatu ke dalam file document.txt
+    //meminta pengguna untuk menginput sesuatu ke dalam file document.txt
     printf("Masukkan Nomor Telepon : ");
     fgets(buffer, sizeof(buffer), stdin);
     //menulis isi dari variabel bufferedwritter ke dalam file document.txt
