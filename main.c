@@ -14,9 +14,9 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     strcpy(userNameInput,nilaiArgumen[1]);
     strcpy(passwordInput,nilaiArgumen[2]);
 
-    int menu;
+    int menu, tanggal, bulan, tahun;
     char kem;
-    char buffer[255];
+    char buku[50], pengarang[50], buffer[255];
     
     FILE *fptr;
     // Membuat error handling jika file yang dituju tidak ditemukan
@@ -69,18 +69,17 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     printf("2)Membuat Kartu Perpustakaan\n");
     printf("3)Ketersediaan Buku\n");
     printf("4)Transaksi Peminjaman\n");
-    printf("5)Transaksi Pengembalian\n");
-    printf("6)Keluar\n\n");
+    printf("5)Keluar\n\n");
     printf("Pilihlah Salah Satu Menu Di atas: ");
     scanf("%d",&menu);
     switch (menu) {
         case 1 : 
          printf("Info Aplikasi\n\n"); 
          printf("Aplikasi ini merupakan hasil dari tugas project mata kuliah Pemrograman kelas B yang disusun oleh kelompok Mikrotik.\n");
-         printf("Aplikasi ini digunakan sebagai simulasi pembuatan kartu perpustakaan secara sederhana.");
+         printf("Aplikasi ini digunakan sebagai simulasi pembuatan kartu perpustakaan secara sederhana.\n");
          break;
         case 2 :
-         printf("Membuat Kartu Perpustakaan\n ");
+         printf("Membuat Kartu Perpustakaan\n");
             break;
         case 3:
          printf("Berikut adalah buku yang tersedia :\n\n"); 
@@ -96,14 +95,8 @@ int main(int totalArgumen, char *nilaiArgumen[]){
             break;
         case 4: 
          printf("Transaksi Peminjaman Buku\n\n");
-         printf("Mohon maaf data anda belum tersedia");
             break;
-        case 5: 
-         printf("Transaksi Pengembalian Buku\n\n");
-         printf("Mohon maaf data anda belum tersedia");
-            break;
-        case 6:
-         printf("Keluar"); 
+        case 5:
             break;
         default:
          printf("Maaf Pilihan anda tidak tersedia\n\n");
@@ -173,7 +166,21 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     fputs(buffer, fptr);
     // setelah dibuka kita wajib menutupi file ini
     fclose(fptr);
+    } 
+    
+    else if(menu==4){
+        printf("Masukan Judul Buku :");
+        scanf("%s", &buku);
+        printf("Masukan Pengarang :");
+        scanf("%s", &pengarang);
+        printf("Masukan Tanggal Peminjaman (DD-MM-YYYY):");
+        scanf("%d-%d-%d", &tanggal,&bulan,&tahun);
+        printf("Masukan Tanggal Pengembalian (DD-MM-YYYY):");
+        scanf("%d-%d-%d", &tanggal,&bulan,&tahun);
+        printf("\nJudul buku : %s\nPengarang : %s\n",buku,pengarang);
+        printf("Tanggal Peminjaman : %d-%d-%d\nTanggal Pengembalian : %d-%d-%d\n",tanggal,bulan,tahun,tanggal,bulan,tahun);
     }
+    
      tidak :
     printf("Kembali ke menu utama [Y/T] ? "); 
     kem = getche();
