@@ -74,9 +74,11 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     scanf("%d",&menu);
     switch (menu) {
         case 1 : 
-         printf("Info Aplikasi\n\n"); 
+         printf("                                             Info Aplikasi\n"); 
+         printf("--------------------------------------------------------------------------------------------------------------------\n");
          printf("Aplikasi ini merupakan hasil dari tugas project mata kuliah Pemrograman kelas B yang disusun oleh kelompok Mikrotik.\n");
          printf("Aplikasi ini digunakan sebagai simulasi pembuatan kartu perpustakaan secara sederhana.\n");
+         printf("--------------------------------------------------------------------------------------------------------------------\n");
          break;
         case 2 :
          printf("Membuat Kartu Perpustakaan\n");
@@ -168,17 +170,17 @@ int main(int totalArgumen, char *nilaiArgumen[]){
     fclose(fptr);
     } 
     
-    else if(menu==4){
+    else if (menu==4){
         printf("Masukan Judul Buku :");
         scanf("%s", &buku);
         printf("Masukan Pengarang :");
         scanf("%s", &pengarang);
         printf("Masukan Tanggal Peminjaman (DD-MM-YYYY):");
-        scanf("%d-%d-%d", &tanggal,&bulan,&tahun);
+        scanf("%d-%d-%d", &tanggal, &bulan, &tahun);
         printf("Masukan Tanggal Pengembalian (DD-MM-YYYY):");
-        scanf("%d-%d-%d", &tanggal,&bulan,&tahun);
-        printf("\nJudul buku : %s\nPengarang : %s\n",buku,pengarang);
-        printf("Tanggal Peminjaman : %d-%d-%d\nTanggal Pengembalian : %d-%d-%d\n",tanggal,bulan,tahun,tanggal,bulan,tahun);
+        scanf("%d-%d-%d", &tanggal, &bulan, &tahun);
+        printf("\nJudul buku : %s\nPengarang : %s\n", buku, pengarang);
+        printf("Tanggal Peminjaman : %d-%d-%d\nTanggal Pengembalian : %d-%d-%d\n", tanggal, bulan, tahun, tanggal, bulan, tahun);
     }
     
      tidak :
