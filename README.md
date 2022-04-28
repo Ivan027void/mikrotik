@@ -6,7 +6,7 @@ proyek pemrograman dengan judul 'pembuatan kartu perpustakaan'
 <hr>
 <b>1. Login dengan melakukan kompilasi terlebih dahulu </b>
 <pre><code> $ gcc main.c -o main </code></pre>
-<pre><code> $ ./Main mikrotik ivan </code></pre>
+<pre><code> $ ./main mikrotik ivan </code></pre>
 
 ### NOTE ⚠️
 <hr>
