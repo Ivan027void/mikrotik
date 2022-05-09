@@ -1,6 +1,12 @@
 ### MIKROTIK
 <hr>
 proyek pemrograman dengan judul 'pembuatan kartu perpustakaan'
+anggota kelompok:
+    1. Ivan chiari (2108107010027)
+    2. Raihan Shabirah (2108107010001)
+    3. Ichwanul Fata (2108107010035)
+    4. Wilda Fahera (2108107010026)
+    5. Rayyan Azzuhri (2108107010060)
 
 ### Cara menjalankan Program ini
 <hr>
