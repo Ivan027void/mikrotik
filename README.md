@@ -4,7 +4,7 @@ proyek pemrograman dengan judul 'pembuatan kartu perpustakaan'
 
 ### anggota kelompok:
 <hr> 
-    <b> 1. Ivan chiari (2108107010027)</b>
+    <pre> 1. Ivan chiari (2108107010027)</pre>
     <pre> 2. Raihan Shabirah (2108107010001)</pre>
     <pre> 3. Ichwanul Fata (2108107010035)</pre>
     <pre> 4. Wilda Fahera (2108107010026)</pre>
